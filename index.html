@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080e24">
+  <title>Solar System — Interactive Explorer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <span class="kicker">ASTRONOMY / FIELD GUIDE 001</span>
+      <h1>Solar System <em>Explorer</em></h1>
+      <p>Choose a world. Discover our cosmic neighbourhood.</p>
+    </header>
+
+    <section class="explorer">
+      <div class="visual">
+        <div class="system" id="system" aria-label="Animated solar system">
+          <div class="orbit o-mercury"><button class="planet mercury" data-world="mercury" aria-label="Mercury"></button></div>
+          <div class="orbit o-venus"><button class="planet venus" data-world="venus" aria-label="Venus"></button></div>
+          <div class="orbit o-earth"><button class="planet earth" data-world="earth" aria-label="Earth"></button></div>
+          <div class="orbit o-mars"><button class="planet mars" data-world="mars" aria-label="Mars"></button></div>
+          <div class="orbit o-jupiter"><button class="planet jupiter" data-world="jupiter" aria-label="Jupiter"></button></div>
+          <div class="orbit o-saturn"><button class="planet saturn" data-world="saturn" aria-label="Saturn"><i></i></button></div>
+          <div class="orbit o-uranus"><button class="planet uranus" data-world="uranus" aria-label="Uranus"></button></div>
+          <div class="orbit o-neptune"><button class="planet neptune" data-world="neptune" aria-label="Neptune"></button></div>
+          <button class="sun" data-world="sun" aria-label="Sun"></button>
+          <div class="star speck-one"></div><div class="star speck-two"></div><div class="star speck-three"></div>
+        </div>
+        <div class="world-list" aria-label="Select a solar system object">
+          <button data-select="sun"><i class="dot sun-dot"></i>Sun</button>
+          <button data-select="mercury"><i class="dot mercury-dot"></i>Mercury</button>
+          <button data-select="venus"><i class="dot venus-dot"></i>Venus</button>
+          <button data-select="earth" class="active"><i class="dot earth-dot"></i>Earth</button>
+          <button data-select="mars"><i class="dot mars-dot"></i>Mars</button>
+          <button data-select="jupiter"><i class="dot jupiter-dot"></i>Jupiter</button>
+          <button data-select="saturn"><i class="dot saturn-dot"></i>Saturn</button>
+          <button data-select="uranus"><i class="dot uranus-dot"></i>Uranus</button>
+          <button data-select="neptune"><i class="dot neptune-dot"></i>Neptune</button>
+        </div>
+      </div>
+
+      <aside class="info" aria-live="polite">
+        <div class="info-top"><span>OBJECT PROFILE</span><span id="ordinal">04 / 09</span></div>
+        <div class="name-row"><span class="profile-dot earth-dot" id="profileDot"></span><h2 id="name">Earth</h2></div>
+        <p id="description">Our home planet and the only known world to support life.</p>
+        <div class="stats">
+          <div><small>CLASS</small><strong id="class">Terrestrial planet</strong></div>
+          <div><small>DIAMETER</small><strong id="diameter">12,742 km</strong></div>
+          <div><small>DAY</small><strong id="day">24 hours</strong></div>
+          <div><small>YEAR</small><strong id="year">365.25 days</strong></div>
+          <div><small>MOONS</small><strong id="moons">1</strong></div>
+          <div><small>AVG. DISTANCE</small><strong id="distance">149.6 million km</strong></div>
+        </div>
+        <div class="info-bottom"><span class="pulse"></span> LIVE INTERACTIVE GUIDE</div>
+      </aside>
+    </section>
+    <footer><span>THE SOLAR SYSTEM</span><span>ILLUSTRATIVE ORBITS · NOT TO SCALE</span></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
